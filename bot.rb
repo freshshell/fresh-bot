@@ -1,4 +1,5 @@
-require 'cinch'
+require 'bundler/setup'
+Bundler.require
 
 nick = 'fredsh'
 github_url = 'http://github.com/freshshell/fresh'
