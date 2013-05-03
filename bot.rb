@@ -8,6 +8,7 @@ bot = Cinch::Bot.new do
   configure do |c|
     c.server = 'irc.freenode.org'
     c.nick = nick
+    c.realname = github_url
     c.channels = ['#freshshell']
   end
 
