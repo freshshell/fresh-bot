@@ -13,7 +13,9 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /(^\d+$|#\d+)/ do |m, num|
-    m.reply "#{github_url}/issues/#{num.tr('#', '')}"
+    issue_number = num.tr('#', '')
+    title = Github.new.issues.get('freshshell', 'fresh', issue_number)['title']
+    m.reply "#{title} #{github_url}/issues/#{issue_number}"
   end
 
   on :message, /^#{nick}:? wiki/ do |m|
