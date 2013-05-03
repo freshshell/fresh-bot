@@ -2,7 +2,7 @@ require 'bundler/setup'
 Bundler.require
 
 nick = 'fredsh'
-github_url = 'http://github.com/freshshell/fresh'
+github_url = 'https://github.com/freshshell/fresh'
 
 bot = Cinch::Bot.new do
   configure do |c|
