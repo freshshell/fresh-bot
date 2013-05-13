@@ -11,6 +11,7 @@ bot = Cinch::Bot.new do
     c.user = nick
     c.realname = github_url
     c.channels = ['#freshshell']
+    c.password = ENV['IRC_PASSWORD']
   end
 
   on :message, /(^\d+$|#\d+)/ do |m, num|
